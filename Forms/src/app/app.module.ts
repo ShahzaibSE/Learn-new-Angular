@@ -10,11 +10,13 @@ import { FormControlComponent } from './form-control/form-control.component';
 import { MdInputModule, MdCardModule, MdInputDirective, MdButtonModule, MdCheckboxModule } from '@angular/material';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DataSource, CdkTableModule } from '@angular/cdk';
+import { FormgroupComponent } from './formgroup/formgroup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormControlComponent
+    FormControlComponent,
+    FormgroupComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
