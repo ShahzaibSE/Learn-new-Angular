@@ -11,12 +11,14 @@ import { MdInputModule, MdCardModule, MdInputDirective, MdButtonModule, MdCheckb
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DataSource, CdkTableModule } from '@angular/cdk';
 import { FormgroupComponent } from './formgroup/formgroup.component';
+import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormControlComponent,
-    FormgroupComponent
+    FormgroupComponent,
+    FormbuilderComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
