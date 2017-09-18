@@ -17,7 +17,7 @@ export class FirstComponent implements OnInit {
 
   doSomething(data) {
     // console.log(`Parent Data : ${this.data}`);
-    this.payload = data;
+    this.payload = data; // Here we get value from child component.
     console.log(this.payload);
   }
 
