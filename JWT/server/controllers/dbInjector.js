@@ -3,8 +3,10 @@
 const mongoose = require('mongoose');
 const dataModels = require('./schema.js');
 
-var dbModels = {
-    users : dataModels.user()
+exports.dbModels = {
+    users : dataModels.user(),
 };
 
-module.exports = dbModels;
+// console.log(dataModels);
+
+// module.exports = dbModels;

@@ -1,7 +1,7 @@
 'use strict'
 
-const User = require('./dbInjector.js').dbModels.users;
-const { execFile } = require('child_process');
+const User = require('./dbInjector.js').dbModels.users; 
+const exec = require('child_process').execFile;
 const jwt = require('jsonwebtoken');
 // const body = req.body;
 
@@ -24,14 +24,15 @@ exports.create = function(req,res) {
         message : 'Internal error while finding user'
         // error : err
       });
-    } else if(data) {
+    } else if(!data) {
        console.log("Data");
        console.log(data);
 
        //Inserting user.
        var newUser = {
          email : body.email,
-         password : body.password
+         password : body.password,
+         createdAt : new Date().getDate()
        }
        var newEntry = new User(newUser);
        newEntry.save(function(err,data) {
@@ -55,7 +56,7 @@ exports.create = function(req,res) {
             status : true,
             resCode : 200,
             isError : false,
-            message : "Data found successfully",
+            message : "Data inserted successfully",
             data : data
           });
          }
@@ -70,8 +71,11 @@ exports.login = function(req,res) {
   // console.log('Body');
   // console.log(body);
   var query =  {
-    email : body.email
+    email : body.email,
+    password : body.password
   };
+  console.log("Query");
+  console.log(query);
 
   //Searching for user if exist letting login.
   User.findOne(query).exec(function(err,data) {

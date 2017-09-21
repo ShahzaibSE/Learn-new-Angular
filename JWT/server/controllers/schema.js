@@ -14,5 +14,5 @@ exports.user = function() {
         updatedAt : Date
     }); 
 
-    return Model('user',userSchema);
+    return mongoose.model('user',userSchema);
 };

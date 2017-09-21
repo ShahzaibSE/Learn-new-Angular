@@ -4,11 +4,28 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+//Mongodb Configurations
+mongoose.connect('mongodb://localhost/jwt_test',function(err) {
+  // console.log('Could not be connected with mongodb');
+  console.log(err);
+});
+
+//Mongodb Events
+mongoose.connection.on('connected',function() {
+  console.log('Connected with Mongodb server');
+});
+
+mongoose.connection.on('error',function() {
+  console.log('Error while connecting with Mongodb');
+});
+//--------------//
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

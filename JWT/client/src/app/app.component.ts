@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthHttp } from 'angular2-jwt';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
 }
