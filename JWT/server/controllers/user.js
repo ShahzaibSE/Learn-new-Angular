@@ -3,6 +3,7 @@
 const User = require('./dbInjector.js').dbModels.users; 
 const exec = require('child_process').execFile;
 const jwt = require('jsonwebtoken');
+const session = require('./dbInjector.js').dbModels.session; 
 // const body = req.body;
 
 exports.create = function(req,res) {

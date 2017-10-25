@@ -5,6 +5,7 @@ const dataModels = require('./schema.js');
 
 exports.dbModels = {
     users : dataModels.user(),
+    session : dataModels.session()
 };
 
 // console.log(dataModels);

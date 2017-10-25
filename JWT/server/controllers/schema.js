@@ -16,3 +16,13 @@ exports.user = function() {
 
     return mongoose.model('user',userSchema);
 };
+
+exports.session = function() {
+    var sessionSchema = Schema({
+        _id : Schema.ObjectId,
+        userId : String,
+        token : String,
+        createdAt : Date,
+        updatedAt : Date
+    });
+}

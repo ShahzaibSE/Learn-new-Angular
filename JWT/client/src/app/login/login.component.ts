@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   role_select_value: string;
 
-  constructor(fb: FormBuilder, public Auth: AuthService, public AuthHttp: AuthHttp) {
+  constructor(fb: FormBuilder, public Auth: AuthService, public AuthHttp: AuthHttp, public http: Http) {
     this.loginForm = fb.group({
      email : [],
      password : [],
@@ -91,7 +91,8 @@ export class LoginComponent implements OnInit {
      headers.append('content-type', 'application/json');
      let options = new RequestOptions({headers: headers});
 
-     this.AuthHttp.post('http://localhost:3005/users/logIn', credientials, options)
+    //  this.AuthHttp.post('http://localhost:3005/users/logIn', credientials, options)
+     this.http.post('http://localhost:3005/users/logIn', credientials, options)
                   .subscribe(
                     (resp) => {
                       console.log(resp.json());

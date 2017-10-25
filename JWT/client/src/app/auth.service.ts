@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Http, Headers, RequestOptions } from '@angular/http';
 
 @Injectable()
 export class AuthService {
@@ -36,6 +37,15 @@ export class AuthService {
   }
 
   isTokenExpired() {
+  }
+
+  logIn (username, password) {
+    let headers = new Headers();
+    headers.append('content-type', 'application/json');
+    let options = new RequestOptions({
+      headers : headers
+    });
+
     
   }
 }

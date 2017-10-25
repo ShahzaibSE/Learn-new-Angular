@@ -14,7 +14,7 @@ var app = express();
 //Mongodb Configurations
 mongoose.connect('mongodb://localhost/jwt_test',function(err) {
   // console.log('Could not be connected with mongodb');
-  console.log(err);
+  // console.log(err);
 });
 
 //Mongodb Events
@@ -38,8 +38,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('./../client/src/'));
 
-app.use('/', index);
+// app.use('/', index);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
