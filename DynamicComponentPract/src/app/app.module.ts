@@ -11,6 +11,7 @@ import { MypostComponent } from './mypost/mypost.component';
 
 // Services
 import { MyPostService } from './my-post.service';
+import { MyPostBannerComponent } from './my-post-banner/my-post-banner.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MyPostService } from './my-post.service';
     MypostDirective,
     TechnologyComponent,
     ArticleComponent,
-    MypostComponent
+    MypostComponent,
+    MyPostBannerComponent
   ],
   imports: [
     BrowserModule,
