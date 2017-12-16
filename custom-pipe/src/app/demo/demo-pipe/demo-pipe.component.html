@@ -1,0 +1,12 @@
+<form>
+  <div>
+    <label>Sample Value</label>
+    <input type="text" placeholder="Enter value" [(ngModel)]="value" [ngModelOptions]="{standalone: true}">
+  </div>
+</form>
+<div>
+  <h2>Original Value</h2>
+  <h3>{{ value }}</h3>
+  <h1>Transformed Value</h1>
+  <h3>{{ value | customPip : 'sequence' }}</h3>
+</div>
