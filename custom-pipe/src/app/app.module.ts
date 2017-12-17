@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { Ng2OrderModule } from 'ng2-order-pipe';
 
 
 import { AppComponent } from './app.component';
@@ -15,7 +16,7 @@ import { DemoPipeComponent } from './demo/demo-pipe/demo-pipe.component';
     DemoPipeComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, Ng2OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

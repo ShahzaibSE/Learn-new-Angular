@@ -11,7 +11,7 @@ export class CustomPipPipe implements PipeTransform {
     console.log('Value to be transformed');
     console.log(value);
     // Sorting logic.
-    let arr: Array<any> = [];
+    let arr: Array<{id: number, name: string, sequence: number}> = value;
     let temp: any = null;
     for (let i = 0; i < arr.length ; i++) {
       for (let j = 0; j < arr.length; j++) {
@@ -22,7 +22,10 @@ export class CustomPipPipe implements PipeTransform {
         }
       }
     }
-    return value + (1 + 1);
+    value = arr;
+    console.log('Value after sorting');
+    console.log(value);
+    return value;
   }
 
 }
