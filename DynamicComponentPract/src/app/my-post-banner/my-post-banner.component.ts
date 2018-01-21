@@ -16,7 +16,7 @@ import { MyPostService } from 'app/my-post.service';
   templateUrl: './my-post-banner.component.html',
   styleUrls: ['./my-post-banner.component.css']
 })
-export class MyPostBannerComponent{
+export class MyPostBannerComponent implements AfterViewInit, OnDestroy {
 
   @ViewChild(MypostDirective)
   private myPostDirective: MypostDirective;	
