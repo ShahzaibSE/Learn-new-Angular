@@ -2,7 +2,7 @@ import { Injectable, ComponentFactoryResolver, ViewContainerRef } from '@angular
 import { ArticleComponent } from './article/article.component';
 import { TechnologyComponent } from './technology/technology.component';
 import { PostItem } from './post-item';
-import { MyPost } from './/models/mypost';
+import { MyPost } from './models/myPost';
 
 @Injectable()
 export class MyPostService {
