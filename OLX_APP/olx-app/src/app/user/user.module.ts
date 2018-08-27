@@ -7,6 +7,9 @@ import {MatButtonModule, MatCheckboxModule, MatCardModule, MatInputModule, MatFo
 // Components.
 import {UserComponent} from './user.component';
 
+// Service.
+import { UserService } from './../shared/services/user/user.service';
+
 @NgModule({
   imports: [
     CommonModule,MatButtonModule, MatCheckboxModule, MatCardModule, MatInputModule, MatFormFieldModule

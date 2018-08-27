@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddetailComponent implements OnInit {
 
+  arr:Number[]= []
   constructor() { }
 
   ngOnInit() {
+  }
+
+  testFn():Number {
+    return
   }
 
 }

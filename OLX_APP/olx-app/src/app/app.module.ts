@@ -7,8 +7,11 @@ import { AppComponent } from './app.component';
 
 // User module.
 import { UserModule } from './user/user.module';
-import { AdlistComponent } from './adlist/adlist.component';
-import { AddetailComponent } from './addetail/addetail.component';
+import { AdlistComponent } from './ad/adlist/adlist.component';
+import { AddetailComponent } from './ad/addetail/addetail.component';
+
+// Service.
+import {UserService} from './shared/services/user/user.service';
 
 
 @NgModule({
