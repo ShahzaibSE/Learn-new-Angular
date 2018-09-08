@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+
+// Dummy data.
+import * as data from './data.json';
 
 @Component({
   selector: 'app-adlist',
@@ -7,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdlistComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    console.log(data);
+  }
 
   ngOnInit() {
   }

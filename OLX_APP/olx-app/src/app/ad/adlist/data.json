@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "name" : "Zameen home"
+    },
+    {
+        "id" : 2,
+        "name" : "Careem home"
+    },
+    {
+        "id" : 3,
+        "name" : "Uber home"
+    },
+    {
+        "id" : 4,
+        "name" : "Khan home"
+    },
+    {
+        "id" : 5,
+        "name" : "Libiya home"
+    },
+    {
+        "id" : 6,
+        "name" : "Ghauri home"
+    }
+]

@@ -14,4 +14,8 @@ export class UserService {
   signIn(email: HTMLInputElement, password: HTMLInputElement) {
     localStorage.setItem('userSession',JSON.stringify({email:email.value, password:password.value}));
   }
+
+  logout(email: HTMLInputElement, password: HTMLInputElement) {
+    localStorage.removeItem('userSession');
+  }
 }

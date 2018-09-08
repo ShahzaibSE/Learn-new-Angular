@@ -13,6 +13,14 @@ import { AddetailComponent } from './ad/addetail/addetail.component';
 // Service.
 import {UserService} from './shared/services/user/user.service';
 
+// Material module with all material module imports.
+import { MaterialModule } from './material/material.module';
+import {MatButtonModule, MatCheckboxModule,
+  MatCardModule,MatInputModule,MatAutocompleteModule} from '@angular/material';
+
+// Routes.
+import { AdRoutesModule } from './ad-routes/ad-routes.module'; 
+
 
 @NgModule({
   declarations: [
@@ -21,7 +29,7 @@ import {UserService} from './shared/services/user/user.service';
     AddetailComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, UserModule
+    BrowserModule, BrowserAnimationsModule, UserModule, MatCardModule, MatButtonModule, AdRoutesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

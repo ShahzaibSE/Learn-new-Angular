@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+interface AdDetail {
+  name: string;
+  category: string;
+  createdAt: Date;
+}
 
 @Component({
   selector: 'app-addetail',
