@@ -13,6 +13,7 @@ export class UserService {
 
   signIn(email: HTMLInputElement, password: HTMLInputElement) {
     localStorage.setItem('userSession',JSON.stringify({email:email.value, password:password.value}));
+    return JSON.parse(localStorage.getItem('userSession'));
   }
 
   logout(email: HTMLInputElement, password: HTMLInputElement) {

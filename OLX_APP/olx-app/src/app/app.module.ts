@@ -19,14 +19,16 @@ import {MatButtonModule, MatCheckboxModule,
   MatCardModule,MatInputModule,MatAutocompleteModule} from '@angular/material';
 
 // Routes.
-import { AdRoutesModule } from './ad-routes/ad-routes.module'; 
+import { AdRoutesModule } from './ad-routes/ad-routes.module';
+import { ErrorDialogComponent } from './shared/error-dialog/error-dialog.component'; 
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AdlistComponent,
-    AddetailComponent
+    AddetailComponent,
+    ErrorDialogComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, UserModule, MatCardModule, MatButtonModule, AdRoutesModule
