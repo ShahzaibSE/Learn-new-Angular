@@ -1,10 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-interface AdDetail {
-  name: string;
-  category: string;
-  createdAt: Date;
-}
+// Servicd.
+import { Ad, AdService } from './../../shared/services/ad/ad.service';
 
 @Component({
   selector: 'app-addetail',
@@ -14,6 +11,8 @@ interface AdDetail {
 export class AddetailComponent implements OnInit {
 
   arr:Number[]= []
+  @Input()
+  Ad: Ad;
   constructor() { }
 
   ngOnInit() {
