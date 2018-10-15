@@ -1,0 +1,15 @@
+{
+  "name": "olx-app-hapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^17.6.0",
+    "inert": "^5.1.0"
+  }
+}

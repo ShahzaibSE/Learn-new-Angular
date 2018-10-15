@@ -20,7 +20,7 @@ import {MatButtonModule, MatCheckboxModule,
 
 // Routes.
 import { AdRoutesModule } from './ad-routes/ad-routes.module';
-import { ErrorDialogComponent } from './shared/error-dialog/error-dialog.component'; 
+import { ErrorDialogComponent } from './shared/error-dialog/error-dialog.component';
 
 
 @NgModule({
