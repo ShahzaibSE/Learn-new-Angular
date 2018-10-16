@@ -4,6 +4,7 @@
 const Hapi = require('hapi');
 const { selectall } = require('./controllers/user.controller');
 const userRoutes = require('./routes/user.routes');
+const { validate } = require('./controllers/authentication');
 
 const server = Hapi.server({
     port: 3000,
@@ -47,9 +48,22 @@ server.route(userRoutes.userRoutes)
 //     }
 // });
 
+server.route({
+    method: "GET",
+    path: "/authenticate",
+    option: {
+        auth: "simple"
+    }, 
+    handler: async (req, h) => {
+        return "Authentication successful"
+    }
+})
+
 const init = async () => {
     await server.register(require('inert'));
+    await server.register(require('hapi-auth-basic'))
     // await server.register(userRoutes)
+    server.auth.strategy('simple', 'basic', { validate });
 
     server.route({
         method: 'GET',
