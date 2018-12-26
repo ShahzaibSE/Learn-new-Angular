@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "electron-build" : "electron ./src"
+    "electron-build": "electron ./src"
   },
   "private": true,
   "dependencies": {
