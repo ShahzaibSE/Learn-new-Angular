@@ -1,0 +1,27 @@
+<!-- <p>addtodo works!</p> -->
+<br/>
+<div id="add_todo_card" class="col-lg-6 col-lg-offset-3">
+  <mat-card>
+    <div>  
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="To-Do Title" #todo_title  required>
+        </mat-form-field><br/>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="To-Do Description" #todo_desc>
+        </mat-form-field><br/>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" #todo_date>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field><br/>
+      </form>
+    </div>
+    <div class="flex-container">
+      <button mat-fab color="primary">Add To-Do</button>
+      <!-- <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
+        <mat-icon>add</mat-icon>
+      </button> -->
+    </div>
+  </mat-card>
+</div>    
