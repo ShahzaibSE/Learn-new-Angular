@@ -1,0 +1,25 @@
+<br/>
+<div id="add_product_card" class="col-lg-6 col-lg-offset-3">
+  <mat-card>
+    <div id="add_pro_form">  
+    <form class="example-form" method="Post">
+      <mat-form-field class="example-full-width" aria-required="true"> 
+        <input matInput placeholder="E-mail" formControlname="login_email" #login_email>
+      </mat-form-field><br/>
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" formControlname="login_password" #login_password>
+      </mat-form-field><br/>
+      <div id="add_pro_btn">
+        <!-- <button mat-fab color="primary"><span>Add</span></button> -->
+        <button mat-raised-button color="primary" type="submit">
+                Sign In</button>
+        <!-- <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
+          <mat-icon>add</mat-icon>
+        </button> -->
+      </div>
+      <!-- <br/> -->
+      <!-- {{add_form_control_group.value | json}} -->
+      </form>
+    </div>
+  </mat-card>
+</div>    
